@@ -88,23 +88,21 @@
           }
         
           iframe {
-          width: 100%; /* Adjust width as needed */
-          height: 600px; /* Adjust height as needed */
-          border: 1px solid #ccc; /* Add border for visibility */
-          margin-bottom: 20px; /* Example margin */
+          width: 100%; 
+          height: 800px; 
+          border: 0px solid black; 
+          margin: 20px; 
           }
 
         .OverallParticipation,
         .TotalMedalsCountry{
-          width: 1000px;
+          width: 850px;
             height: auto;
             border-radius: 10px;
             border: 1px solid white;
             margin: 0 auto;
             display: flex;
           }    
-
-
 
         .GenderDistribution {
             width: 1000px;
@@ -205,16 +203,17 @@
           to {opacity: 1}
           }
         
-          .column {
-            float: left;
-            width: 50%;
-            padding: 5px;
-          }
+          * {box-sizing: border-box;}
 
-          .row::after {
+          .row{
             content: "";
             clear: both;
-            display: table;
+            display: flex;
+          }
+          
+          .column {
+            flex: 0 auto;
+            padding: 5px;
           }
 
           #map {
@@ -226,7 +225,6 @@
             
           }
           
-
     </style>      
   </head>
 
@@ -298,37 +296,37 @@
       <div class="mySlides">
         <div class="numbertext">3 / 8</div>
         <img src="Images/Variation of Male Athletes Height Who Won Gold.png" style="width:100%">
-        <div class = "text">Variation of Male Athletes Height Who Won Gold.png</div>
+        <div class = "text">Variation of Male Athletes Height Who Won Gold</div>
       </div>
       
       <div class="mySlides">
         <div class="numbertext">4 / 8</div>
         <img src="Images/Variation of Female Athletes Height Who Won Gold.png" style="width:100%">
-        <div class = "text">Variation of Female Athletes Height Who Won Gold.png</div>
+        <div class = "text">Variation of Female Athletes Height Who Won Gold</div>
       </div>
       
       <div class="mySlides">
         <div class="numbertext">5 / 8</div>
         <img src="Images/Variation of Male Athletes Height Who Won Silver.png" style="width:100%">
-        <div class = "text">Variation of Male Athletes Height Who Won Silver.png</div>
+        <div class = "text">Variation of Male Athletes Height Who Won Silver</div>
       </div>
       
       <div class="mySlides">
         <div class="numbertext">6 / 8</div>
         <img src="Images/Variation of Female Athletes Height Who Won Silver.png" style="width:100%">
-        <div class = "text">Variation of Female Athletes Height Who Won Silver.png</div>
+        <div class = "text">Variation of Female Athletes Height Who Won Silver</div>
       </div>
       
       <div class="mySlides">
         <div class="numbertext">7 / 8</div>
         <img src="Images/Variation of Male Athletes Height Who Won Bronze.png" style="width:100%">
-        <div class = "text">Variation of Male Athletes Height Who Won Bronze.png</div>
+        <div class = "text">Variation of Male Athletes Height Who Won Bronze</div>
       </div>
       
       <div class="mySlides">
         <div class="numbertext">8 / 8</div>
         <img src="Images/Variation of Female Athletes Height Who Won Bronze.jpg" style="width:100%">
-        <div class = "text">Variation of Female Athletes Height Who Won Bronze.png</div>
+        <div class = "text">Variation of Female Athletes Height Who Won Bronze</div>
       </div>
       
           <!-- Previous and Next buttons -->
@@ -393,7 +391,9 @@
     </h3>
     
     <div id="map"></div>
-    #map {height:180px;}
+    #map {height:1000px;
+          width: 100%;
+          }
     <div id = "dynamic-content"></div>
  
     <script src="static/js/Map.js"></script>

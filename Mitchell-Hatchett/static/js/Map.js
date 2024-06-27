@@ -2,7 +2,7 @@
 
 let myMap = L.map("map", {
     center: [37.09, -95.71],
-    zoom: 4
+    zoom: 2
 });
 
 //Create Layers

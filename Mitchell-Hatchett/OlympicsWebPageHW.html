@@ -3,11 +3,23 @@
 <html lang="en-us" dir="ltr">
   
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0">
     
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script 
+      src="http://d3js.org/d3.v3.min.js" 
+      charset="utf-8"></script>
      
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link 
+      rel="stylesheet" 
+      type="text/css" 
+      href="static/css/style.css">
+
+      <link 
+      rel="stylesheet" 
+      type="text/css" 
+      href="webStyle.css">
     
     <title>120 Years of Olympic History Data analysis</title>
 
@@ -16,215 +28,32 @@
       content="Group project by Group 2 explaining a brief history of the Olympics Games"
     />
    
+    <meta 
+      name="keywords"  
+      content="Olympics, history, data analysis, sports" />
     
-    <meta name="keywords" content="Olympics, history, data analysis, sports" />
+    <meta 
+      name="languageUrl" 
+      content="/en/" />
     
-    <meta name="languageUrl" content="/en/" />
-    
-
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    <script 
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0">
     
   <style>
 
-        body {
-            font-family: Verdana, sans-serif;
-            margin: 0;
-            background-image: url('Images/composition-paper-style-sport-flame.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            }
-          
-          h1,h2, h3 {
-            background-color: white; 
-            text-align:center; 
-            border: 2px solid black; 
-            padding :10px
-            }
-          
-          p { 
-            background-color: white; 
-            text-align:center; 
-            border: 2px solid black; 
-            padding :10px;
-            }
-
-          .QuickDBD {
-            width: 500px;
-            height: auto;
-            border-radius: 10px;
-            border: 1px solid black;
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .PGAdmin{
-            width:720px;
-            height:auto;
-            border-radius: 10px;
-            border: 1px solid black;
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          
-          .Height{
-            width : 1000px;
-            height: auto;
-            border-radius: 10px;
-            border: 1px solid black;
-          }
-        
-          iframe {
-          width: 100%; 
-          height: 800px; 
-          border: 0px solid black; 
-          margin: 20px; 
-          }
-
-        .OverallParticipation,
-        .TotalMedalsCountry{
-          width: 850px;
-            height: auto;
-            border-radius: 10px;
-            border: 1px solid white;
-            margin: 0 auto;
-            display: flex;
-          }    
-
-        .GenderDistribution {
-            width: 1000px;
-            height: auto;
-            border-radius: 10px;
-            border: 1px solid black;
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-         
-          * {box-sizing: border-box}
-          body {font-family: Verdana, sans-serif; margin:0}
-          .mySlides {display: none}
-          img {vertical-align: middle;}
-
-          /* Slideshow container */
-          .slideshow-container {
-            max-width: 1600px;
-            position: relative;
-            margin: auto;
-          }
-
-        /* Next & previous buttons */
-          .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: black;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(255, 255, 255, 0.8);
-          }
-
-           /* Position the "next button" to the right */
-          .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-          }
-
-        /* On hover, add a black background color with a little bit see-through */
-          .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-            color: white;
-          }
-
-        /* Caption text */
-          .text {
-            color: black;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-          }
-
-        /* Number text (1/8) */
-          .numbertext {
-            color: black;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-          }
-
-        /* The dots/bullets/indicators */
-          .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-          }
-
-          .active, .dot:hover {
-            background-color: #717171;
-          }
-
-        /* Fading animation */
-          .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-          }
-
-          @keyframes fade {
-          from {opacity: .4} 
-          to {opacity: 1}
-          }
-        
-          * {box-sizing: border-box;}
-
-          .row{
-            content: "";
-            clear: both;
-            display: flex;
-          }
-          
-          .column {
-            flex: 0 auto;
-            padding: 5px;
-          }
-
-          #map {
-            Height: 400px;
-            width: 80%;
-            margin: 20px auto;
-            border-radius: 10px;
-            border: 1px solid black;
-            
-          }
-          
+       
     </style>      
   </head>
 
@@ -247,16 +76,12 @@
     </p>
 
     <h2> Group Members: <hr/>
-    
       <li>Mitchell Hatchett</li>
       <li>Andrew Giannettino</li>
       <li>Tetyana Spielmann</li>
       <li>Jaylen Whittaker</li>
       <li>David Scott</li>
-    
-    
-  </h2>
-    
+    </h2>
     
     <!--Andrew Giannettino Section-->
    
@@ -270,7 +95,7 @@
       </div>
       <div class="column">
         <img
-          src="Images/PostgreeSQL code and PG Admin screenshorts.png"
+          src="Images/PGAdmin screenshot2.png"
           alt="Total Medals Won by Country.png"
           class="PGAdmin"
         />
@@ -279,79 +104,17 @@
     
     <h3>Athletes by Height </h3>
     
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 8</div>
-        <img src="Images/Variation of Male Athletes Height.png" style="width:100%">
-        <div class = "text">Variation of Male Athletes Height</div>
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">2 / 8</div>
-        <img src="Images/Variation of Female Athletes Height.png" style="width:100%">
-        <div class = "text">Variation of Female Athletes Height</div>
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">3 / 8</div>
-        <img src="Images/Variation of Male Athletes Height Who Won Gold.png" style="width:100%">
-        <div class = "text">Variation of Male Athletes Height Who Won Gold</div>
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">4 / 8</div>
-        <img src="Images/Variation of Female Athletes Height Who Won Gold.png" style="width:100%">
-        <div class = "text">Variation of Female Athletes Height Who Won Gold</div>
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">5 / 8</div>
-        <img src="Images/Variation of Male Athletes Height Who Won Silver.png" style="width:100%">
-        <div class = "text">Variation of Male Athletes Height Who Won Silver</div>
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">6 / 8</div>
-        <img src="Images/Variation of Female Athletes Height Who Won Silver.png" style="width:100%">
-        <div class = "text">Variation of Female Athletes Height Who Won Silver</div>
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">7 / 8</div>
-        <img src="Images/Variation of Male Athletes Height Who Won Bronze.png" style="width:100%">
-        <div class = "text">Variation of Male Athletes Height Who Won Bronze</div>
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">8 / 8</div>
-        <img src="Images/Variation of Female Athletes Height Who Won Bronze.jpg" style="width:100%">
-        <div class = "text">Variation of Female Athletes Height Who Won Bronze</div>
-      </div>
-      
-          <!-- Previous and Next buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-      </div>
-    </div>
+    
+    <iframe src="Static2/js/slideshow.html" frameborder = "0" class="slideshow"></iframe>
+    
     
     <!--Tetyana Spielmann Section-->
         
     <h3> History of the Age of Olympians</h3>
     
-    <iframe src="Images/The Overall Trend Of Athelete's Age.html"></iframe>
+    <iframe src="Images/The Overall Trend Of Athelete's Age.html" frameborder="0"></iframe>
     
-    <iframe src="Images/Variation of ages in sports by year.html"></iframe>
+    <iframe src="Images/Variation of ages in sports by year.html" frameborder="0"></iframe>
 
     <!--Jaylen Whittaker Section-->
     
@@ -382,8 +145,6 @@
 
     <!--David Scott Section-->
     
-    <h3></h3>
-
     <!--saved space-->
   
     <!--Mitchell Hatchett-->
@@ -395,37 +156,7 @@
     <script src="static/js/Map.js"></script>
     <br>
     <br>
-    <br>
     
     
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-      }
-      </script>
-
   </body>
 </html>
